@@ -1,0 +1,214 @@
+/* fonts */
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@font-face {
+  font-family: "Spoqa Han Sans Neo GNB KR";
+  src: url(../fonts/SpoqaHanSansNeo-Regular.woff);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Spoqa Han Sans Neo GNB KR";
+  src: url(../fonts/SpoqaHanSansNeo-Bold.woff);
+  font-weight: 700;
+}
+body {
+  font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+/* component */
+.c-sprite {
+  display: inline-block;
+  background: url(../images/sprite.png) no-repeat;
+  background-size: 1284px 1258px;
+  font-size: 0;
+}
+
+/* header */
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  z-index: 100;
+  padding: 0 0 0 74px;
+  min-height: 80px;
+  background-color: #000;
+}
+.header > h1 {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding-top: 4px;
+}
+.header__logo {
+  width: 158px;
+  height: 46px;
+  background-position: -275px -228px;
+}
+.header__link {
+  position: relative;
+  display: inline-flex;
+}
+.header__link[target=_blank]::after {
+  display: inline-block;
+  background: url(../images/sprite.png) no-repeat;
+  background-size: 1284px 1258px;
+  font-size: 0;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-position: -1237px -1161px;
+  margin: -2px 0 0 5px;
+  opacity: 0.5;
+  transition: 0.2s;
+}
+.header__link[target=_blank]:hover::after {
+  opacity: 1;
+}
+.header__link--new::after {
+  content: "";
+  display: inline-block;
+  margin: 0 0 13px 5px;
+  width: 5px;
+  height: 5px;
+  background-color: #ff009c;
+  border-radius: 50%;
+}
+.header__link--newsub:after {
+  content: "";
+  display: inline-block;
+  margin: 0 0 9px 4px;
+  width: 5px;
+  height: 5px;
+  background-color: #ff009c;
+  border-radius: 50%;
+}
+.header__menu {
+  display: flex;
+  margin-left: 50px;
+}
+.header__menu > li > a {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 15.36px;
+  padding: 0 7.68px;
+  font-size: 17px;
+  color: #fff;
+}
+.header__submenu {
+  padding-top: 20px;
+  min-height: 263px;
+}
+.header__submenu > li {
+  margin-left: 15.36px;
+}
+.header__submenu > li > a {
+  display: inline-block;
+  padding: 13px 0 5px;
+  margin-left: 7.68px;
+  font-size: 14px;
+  color: #888;
+  transition: 0.2s;
+}
+.header__submenu > li > a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  margin-left: auto;
+}
+.header__login {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  font-size: 0;
+}
+.header__login::before, .header__login::after {
+  content: "";
+  display: inline-block;
+  background: url(../images/sprite.png) no-repeat;
+  background-size: 1284px 1258px;
+  font-size: 0;
+  width: 50px;
+  height: 12px;
+  background-position: -635px -499px;
+}
+.header__login::after {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-position: -1037px -969px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.header__login:hover::after {
+  opacity: 1;
+}
+.header__pcplus {
+  display: inline-block;
+  background: url(../images/sprite.png) no-repeat;
+  background-size: 1284px 1258px;
+  font-size: 0;
+  width: 71px;
+  height: 30px;
+  background-position: -597px -1044px;
+  margin-left: 5px;
+}
+.header__pcplus--on {
+  background-position: -669px -1044px;
+}
+.header__start {
+  position: relative;
+  width: 268px;
+  height: 80px;
+  font-size: 0;
+  margin-left: 48px;
+}
+.header__start::before, .header__start::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: url(../images/bt_header_gamestart.png) 50% 0;
+  transition: 0.2s;
+}
+.header__start::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../images/bt_header_gamestart_hover.png);
+  opacity: 0;
+}
+.header__start:hover::after {
+  opacity: 1;
+}
+
+/* main */
+.stovegnb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  padding: 0 40px;
+}
+.stovegnb__menu {
+  display: flex;
+  align-items: center;
+}
+.stovegnb__text {
+  margin-left: 21px;
+  font-family: "Spoqa Han Sans Neo GNB KR";
+  font-size: 13px;
+  font-weight: 700;
+  color: #1f1f1f;
+}
+
+.main-top {
+  position: relative;
+  top: -80px;
+  width: 100%;
+  height: 1000px;
+  background: url(../images/bg_main.jpg) no-repeat;
+  background-position: 50% 0;
+}/*# sourceMappingURL=style.css.map */

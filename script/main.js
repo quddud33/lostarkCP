@@ -42,3 +42,30 @@ header_link_main.forEach((link) => {
     header_subline.style.left = this.querySelector('.header__link').getBoundingClientRect().left+'px';
   });
 });
+
+// 스와이퍼
+let bullet_main_slide = ['2024 썸머 업데이트 로드맵', '레츠 고! 썸머 룰렛', '출석 이벤트', '피로연 패키지'];
+let main_swiper = new Swiper(".main-top__main-slide", {
+  effect: "fade",
+  loop: true,
+  autoplay: {
+    delay: 10000
+  },
+  allowTouchMove: false,
+  pagination: {
+    el: '.main-top__main-slide .swiper-pagination',
+    clickable: true,
+    renderBullet: function (index) {
+      return '<div class="swiper-pagination-bullet swiper-pagination-text"><span>' + (bullet_main_slide[index]) + '</span></div>';
+    }
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  on: {
+    slideChange: function() {
+      document.querySelector('.main-top__main-slide .count').innerHTML = this.realIndex + 1;
+    },
+  },
+});

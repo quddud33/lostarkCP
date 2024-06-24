@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./script/main.js" defer></script>
   <title>로스트아크</title>
 </head>
@@ -134,6 +136,38 @@
     </div>
     <div class="main-top">
       <a href="#" class="main-top__detail-btn">자세히 보기</a>
+      <div class="swiper main-top__main-slide">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide swiper-slide--update">
+            <img src="./images/main_slide_01.jpg" />
+          </div>
+          <div class="swiper-slide swiper-slide--event">
+            <img src="./images/main_slide_02.jpg" />
+          </div>
+          <div class="swiper-slide swiper-slide--event">
+            <img src="./images/main_slide_03.jpg" />
+          </div>
+          <div class="swiper-slide swiper-slide--shop">
+            <img src="./images/main_slide_04.jpg" />
+            <div class="main-top__video">
+							<video autoplay muted loop>
+								<source src="./videos/banner_360x240_v2.mp4" type="video/mp4">
+							</video>
+						</div>
+          </div>
+        </div>
+        <div class="swiper-control">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-fraction">
+            <span class="count">1</span>
+            /
+            <span class="total">4</span>
+          </div>
+          <a href="#" class="swiper-all"></a>
+        </div>
+      </div>
     </div>
   </main>
 </body>

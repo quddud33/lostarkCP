@@ -11,6 +11,7 @@
   font-weight: 700;
 }
 body {
+  width: 1903px;
   font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
 }
 
@@ -22,14 +23,34 @@ body {
   font-size: 0;
 }
 
+main {
+  position: relative;
+}
+
 /* header */
 .header {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 48px;
   display: flex;
+  width: 1903px;
+  height: 80px;
   z-index: 100;
   padding: 0 0 0 74px;
   min-height: 80px;
+  transition: height 0.2s, background-color 0.2s;
+}
+.header--hover {
+  background-color: #000;
+  height: 343px;
+}
+.header--hover .header__subline {
+  opacity: 1;
+  visibility: visible;
+}
+.header--hover .header__scroll {
+  background-color: transparent;
+}
+.header--active {
   background-color: #000;
 }
 .header > h1 {
@@ -37,6 +58,20 @@ body {
   align-items: center;
   height: 80px;
   padding-top: 4px;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 79px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  opacity: 0.1;
+  background-color: #fff;
+}
+.header__nav:hover .header__submenu {
+  opacity: 1;
+  visibility: visible;
 }
 .header__logo {
   width: 158px;
@@ -93,9 +128,24 @@ body {
   font-size: 17px;
   color: #fff;
 }
+.header__subline {
+  position: absolute;
+  top: 77px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff009c;
+  transition: 0.2s;
+  opacity: 0;
+  visibility: hidden;
+}
 .header__submenu {
+  position: absolute;
   padding-top: 20px;
   min-height: 263px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
 }
 .header__submenu > li {
   margin-left: 15.36px;
@@ -183,6 +233,15 @@ body {
 .header__start:hover::after {
   opacity: 1;
 }
+.header__scroll {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: width 0.2s;
+  background-color: #8809f6;
+}
 
 /* main */
 .stovegnb {
@@ -206,9 +265,17 @@ body {
 
 .main-top {
   position: relative;
-  top: -80px;
   width: 100%;
   height: 1000px;
   background: url(../images/bg_main.jpg) no-repeat;
   background-position: 50% 0;
+}
+.main-top__detail-btn {
+  position: absolute;
+  top: 299px;
+  left: 50%;
+  width: 175px;
+  height: 48px;
+  margin-left: -87.5px;
+  font-size: 0;
 }/*# sourceMappingURL=style.css.map */

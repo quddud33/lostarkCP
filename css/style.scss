@@ -14,6 +14,7 @@
 }
 
 body {
+  width: 1903px;
   font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
 }
 
@@ -28,20 +29,56 @@ body {
   @include c-sprite;
 }
 
+main {
+  position: relative;
+}
+
 /* header */
 .header {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 48px;
   display: flex;
+  width: 1903px;
+  height: 80px;
   z-index: 100;
   padding: 0 0 0 74px;
   min-height: 80px;
-  background-color: #000;
+  transition: height .2s, background-color .2s;
+  &--hover {
+    background-color: #000;
+    height: 343px;
+    .header__subline {
+      opacity: 1;
+      visibility: visible;
+    }
+    .header__scroll {
+      background-color: transparent;
+    }
+  }
+  &--active {
+    background-color: #000;
+  }
   > h1 {
     display: flex;
     align-items: center;
     height: 80px;
     padding-top: 4px;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 79px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    opacity: .1;
+    background-color: #fff;
+  }
+  &__nav {
+    &:hover .header__submenu {
+      opacity: 1;
+      visibility: visible;
+    }
   }
   &__logo {
     width: 158px;
@@ -99,9 +136,24 @@ body {
       }
     } 
   }
+  &__subline {
+    position: absolute;
+    top: 77px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff009c;
+    transition: .2s;
+    opacity: 0;
+    visibility: hidden;
+  }
   &__submenu {
+    position: absolute;
     padding-top: 20px;
     min-height: 343px - 80px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s;
     > li {
       margin-left: 15.36px;
       > a {
@@ -183,6 +235,15 @@ body {
       opacity: 1;
     }
   }
+  &__scroll {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: width .2s;
+    background-color: #8809f6;
+  }
 }
 
 /* main */
@@ -207,9 +268,17 @@ body {
 
 .main-top {
   position: relative;
-  top: -80px;
   width: 100%;
   height: 1000px;
   background: url(../images/bg_main.jpg) no-repeat;
   background-position: 50% 0;
+  &__detail-btn {
+    position: absolute;
+    top: 299px;
+    left: 50%;
+    width: 175px;
+    height: 48px;
+    margin-left: -87.5px;
+    font-size: 0;
+  }
 }

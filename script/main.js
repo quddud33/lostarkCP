@@ -60,12 +60,12 @@ let main_swiper = new Swiper(".main-top__main-slide", {
     }
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".main-top__main-slide .swiper-button-next",
+    prevEl: ".main-top__main-slide .swiper-button-prev",
   },
   on: {
     slideChange: function() {
-      document.querySelector('.main-top__main-slide .count').innerHTML = this.realIndex + 1;
+      document.querySelector('.main-top__main-slide .count').innerText = this.realIndex + 1;
     },
   },
 });
@@ -82,12 +82,12 @@ let main_side_swiper = new Swiper(".main-top__side-slide", {
     type: 'fraction'
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".main-top__side-slide .swiper-button-next",
+    prevEl: ".main-top__side-slide .swiper-button-prev",
   },
   on: {
     slideChange: function() {
-      document.querySelector('.main-top__main-slide .count').innerHTML = this.realIndex + 1;
+      document.querySelector('.main-top__side-slide .count').innerText = this.realIndex + 1;
     },
   },
 });
@@ -104,12 +104,12 @@ let main_content_swiper = new Swiper(".main-content__slide", {
     type: 'fraction'
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".main-content__slide .swiper-button-next",
+    prevEl: ".main-content__slide .swiper-button-prev",
   },
   on: {
     slideChange: function() {
-      document.querySelector('.main-top__main-slide .count').innerHTML = this.realIndex + 1;
+      document.querySelector('.main-content__slide .count').innerText = this.realIndex + 1;
     },
   },
 });
@@ -125,8 +125,8 @@ let main_video_swiper = new Swiper(".main-content__movie-slide", {
     clickable: true
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".main-content__movie-slide .swiper-button-next",
+    prevEl: ".main-content__movie-slide .swiper-button-prev",
   },
 });
 
@@ -141,7 +141,7 @@ let main_class_swiper = new Swiper(".main-content__class-slide", {
     clickable: true
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".main-content__class-slide .swiper-button-next",
+    prevEl: ".main-content__class-slide .swiper-button-prev",
   },
 });

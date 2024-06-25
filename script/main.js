@@ -8,6 +8,13 @@ header_nav.addEventListener('mouseout', () => {
   header.classList.remove('header--hover');
 });
 
+// TOP
+let aside_top = document.querySelector('.aside__top > a');
+
+aside_top.addEventListener('click', () => {
+  window.scrollTo(0, 0);
+});
+
 function toggleHeader(scroll) {
   scroll <= 48 ?
   (header.style.top = 48 - scroll + 'px')

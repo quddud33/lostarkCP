@@ -1215,4 +1215,144 @@ footer {
   width: 1903px;
   height: 253px;
   background-color: #212226;
+}
+
+/* aside */
+.aside {
+  position: fixed;
+  right: 0;
+  bottom: 110px;
+  z-index: 99;
+}
+.aside > ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 125px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-bottom: none;
+}
+.aside > ul > li {
+  border-bottom: 1px solid #ddd;
+}
+.aside__pcbang > a, .aside__benefit > a, .aside__coupon > a, .aside__cash > a {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  line-height: 19.5px;
+  color: #000;
+}
+.aside__pcbang > a::before, .aside__benefit > a::before, .aside__coupon > a::before, .aside__cash > a::before {
+  display: inline-block;
+  background: url(../images/sprite.png) no-repeat;
+  background-size: 1284px 1258px;
+  font-size: 0;
+  content: "";
+}
+.aside__pcbang > a:hover, .aside__benefit > a:hover, .aside__coupon > a:hover, .aside__cash > a:hover {
+  color: #8045dd;
+}
+.aside__pcbang:hover, .aside__benefit:hover, .aside__coupon:hover, .aside__cash:hover {
+  color: #8045dd;
+}
+.aside__facebook > a, .aside__youtube > a, .aside__kakao > a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.aside__facebook > a::before, .aside__youtube > a::before, .aside__kakao > a::before {
+  display: inline-block;
+  background: url(../images/sprite.png) no-repeat;
+  background-size: 1284px 1258px;
+  font-size: 0;
+  content: "";
+}
+.aside__pcbang {
+  width: 100%;
+  height: 90px;
+}
+.aside__pcbang > a::before {
+  width: 24px;
+  height: 20px;
+  background-position: -635px -1162px;
+}
+.aside__benefit {
+  width: 100%;
+  height: 90px;
+}
+.aside__benefit > a::before {
+  width: 24px;
+  height: 25px;
+  background-position: -1218px -624px;
+}
+.aside__coupon {
+  width: 100%;
+  height: 90px;
+}
+.aside__coupon > a::before {
+  width: 28px;
+  height: 16px;
+  background-position: -929px -1081px;
+}
+.aside__cash {
+  width: 100%;
+  height: 90px;
+}
+.aside__cash > a::before {
+  width: 26px;
+  height: 26px;
+  background-position: -1218px -338px;
+}
+.aside__facebook {
+  width: 33.3%;
+  height: 50px;
+  font-size: 0;
+}
+.aside__facebook > a::before {
+  width: 10px;
+  height: 21px;
+  background-position: -1271px -1010px;
+}
+.aside__youtube {
+  width: 33.3%;
+  height: 50px;
+  font-size: 0;
+}
+.aside__youtube > a::before {
+  width: 26px;
+  height: 18px;
+  background-position: -850px -1081px;
+}
+.aside__kakao {
+  width: 33.3%;
+  height: 50px;
+  font-size: 0;
+}
+.aside__kakao > a::before {
+  width: 23px;
+  height: 24px;
+  background-position: -1218px -1086px;
+}
+.aside__top {
+  width: 100%;
+  line-height: 39px;
+  font-family: "trajan-pro-3";
+}
+.aside__top > a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: #000;
+}
+.aside__top > a:hover {
+  color: #8045dd;
 }/*# sourceMappingURL=style.css.map */

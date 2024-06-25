@@ -593,6 +593,24 @@ main {
   border: 0;
   background-position: -1196px -1077px;
 }
+.main-top__banner {
+  position: absolute;
+  top: 382px;
+  right: 158px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  text-align: center;
+  animation: bannerMove 2s ease-in-out 0s infinite;
+}
+@keyframes bannerMove {
+  0%, 100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
 
 /* main-content */
 .main-content__info {

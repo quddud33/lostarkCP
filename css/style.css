@@ -125,6 +125,7 @@ main {
   line-height: 80px;
   margin: 0 15.36px;
   padding: 0 7.68px;
+  word-break: keep-all;
   font-size: 17px;
   color: #fff;
 }
